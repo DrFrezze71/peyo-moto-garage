@@ -1,0 +1,253 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;font-family: 'Montserrat', sans-serif;
+}
+.main-img{
+    width: 100%;
+    filter: brightness(80%);
+    margin: 0;
+    margin-top: -105px;
+
+}
+.top{
+    position: sticky;
+    width: 100%;
+    z-index: 10;
+    margin-top: 15px;
+    top: 0px;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.579);
+    color: white;
+    
+    justify-content: flex-end;
+    display:flex;
+    align-items: center;
+
+
+}
+.slogan h1{
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-size: 45px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    right: 7%;
+    top: 40%;
+    
+}
+.slogan h2{
+    position: absolute;
+    z-index: 1;
+    right: 7%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    top: 47%;
+    color: white;
+    font-size: 30px;
+    filter: opacity(80%);
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.top .logo img{
+    height: 60px;
+    
+}
+.logo{
+    width: 20%;
+    text-align: center;
+
+}
+.top_right{
+
+display: flex;
+justify-content: right;
+width: 80%;
+padding-right: 5%;
+
+    
+
+}
+.top_right .option{
+    margin: 2%;
+    text-align: center;
+    
+}
+.offer-img{
+    width: 100%;
+    margin-top: -4px;
+    height: 100vh;
+    z-index: -10;
+    top: 0px;
+    position: sticky;
+    filter: brightness(80%);
+}
+.offer{
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offers{
+    width: 70%;
+    height: 90%;
+
+    
+
+    
+}
+.offers h1{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.under h3{
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+
+}
+.under{
+    margin-bottom: 50px;
+}
+.each{
+    display: flex;
+    align-items: center;
+    color: white;
+
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.under h3::after { 
+    content:""; 
+    display: block;
+    position:absolute;
+    margin-top: 10px;
+
+    background:white; 
+    width:70%; 
+    height:4px; 
+    border-radius: 3px;
+  }
+.each img{
+    width: 60px;
+    margin-right: 20px;
+    margin-left: 5px;
+}
+.quali{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    padding-block: 100px;
+    position: relative;
+
+}
+.quality{
+    
+    display: flex;
+    align-items: center;
+
+}
+
+.quality img{
+    width: 100%;
+}
+.quality_tex{
+    color: white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding-left: 30px ;
+    
+    
+
+}
+
+.quality_tex h1{
+    font-size: 35px;
+    padding-right: 20px;
+    width: 35%;
+
+}
+.quality_tex h2{
+    font-size: 15px;
+    width: 30%;
+    padding-block: 20px;
+    border-left: 2px solid white;
+    padding-left: 20px;
+    
+
+
+}
+
+.gallery{
+    color: white;
+    height: fit-content;
+
+    text-align: center;
+    
+}
+.galer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+.gallery-inside{
+
+    text-align: center;
+    height:min-content;
+    padding: 20px;
+
+}
+.gallery-inside img{
+    width: 300px;
+    margin: 10px;
+
+}
+.gallery-inside img:focus{
+    width: 100px;
+}
+.contact{
+    color: white;
+    
+    width: 100%;
+    padding-block: 40px;
+}
+.contact-mid{
+    display: flex;
+    justify-content: center;
+}
+.contact h1{
+    text-align: center;
+}
+.contact-left{
+    padding-top: 20px;padding-left: 20px;
+    width: 50%;
+
+}
+.contact-left div{
+    padding-top: 20px;padding-left: 10px;
+}
+.contact-left div a {
+    text-decoration: underline;
+    
+}
+.contact-left div i{
+    padding-left: 10px;padding-top: 6px;
+}
+.contact-right{
+
+}
