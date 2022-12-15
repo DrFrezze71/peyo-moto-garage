@@ -28,11 +28,11 @@
     position: absolute;
     z-index: 1;
     color: white;
-    font-size: 45px;
+    font-size: 5vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     right: 7%;
-    top: 40%;
+    top: 25vw;
     
 }
 .slogan h2{
@@ -41,11 +41,13 @@
     right: 7%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    top: 47%;
+    font-size: 2vw;
+    top: 30vw;
     color: white;
-    font-size: 30px;
+    
     filter: opacity(80%);
 }
+
 a{
     text-decoration: none;
     color: white;
@@ -54,7 +56,7 @@ a{
     font-weight: 600;
 }
 .top .logo img{
-    height: 60px;
+    height:65px;
     
 }
 .logo{
@@ -221,6 +223,18 @@ padding-right: 5%;
 .gallery-inside img:focus{
     width: 100px;
 }
+.gallery input{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+  
+    border: 1px solid white;
+    padding: 7px;
+    display: none;
+}
+.gallery input:hover{
+    cursor: pointer;
+}
 .contact{
     color: white;
     width: 100%;
@@ -251,6 +265,63 @@ padding-right: 5%;
 .contact-left div i{
     padding-left: 10px;padding-top: 6px;
 }
-.contact-right{
 
+
+
+@media all and (max-width: 620px) {
+    .top{
+        display:none;
+        
+    }
+    .main-img{
+        margin-top: 0px;
+    }
+    
+    .slogan h1{
+        font-size: 6.5vw;
+    }
+    .slogan h2{
+        font-size: 3.5vw;
+        top: 31vw;
+
+    }
+    .offer h1{
+        font-size: 8vw;
+    }
+    .under h3::after { 
+        height: 3px;
+    
+    }
+    .each{
+        font-size:3.5vw ;
+    }
+    .each img{
+        width: 10vw;
+    }
+    .under h3{
+        font-size: 3vw;
+    }
+    .quality img{
+        width: 170%;
+        margin-left: -70%;
+    }
+    .quality_tex h1{
+        font-size: 5vw;
+    }
+    .quality_tex h2{
+        font-size: 2.5vw;
+        width: 50%;
+    }
+    .gallery-inside img:nth-last-child(-n +6){
+        display: none;
+    }
+    .gallery-inside input{
+        display: unset;
+    }
+    .contact-left{
+        text-align: center;
+    }
+    .contact-left h3{
+        text-align: left;
+    }
 }
