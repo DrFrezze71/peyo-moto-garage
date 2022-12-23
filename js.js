@@ -1,3 +1,7 @@
+
+
+
+
 const THUMBNAILS = document.querySelectorAll(".thumbnail img");
 const POPUP = document.querySelector(".popup");
 const POPUP_CLOSE = document.querySelector(".popup__close");
@@ -74,7 +78,6 @@ POPUP.addEventListener("click", (e) => {
 
 function isInViewport(el) {
     const rect = el.getBoundingClientRect();
-    console.log(rect)
     if(el.classList.contains("offer")){
         return (
             rect.top >= -364 && rect.top <= el.offsetHeight - 250
@@ -115,7 +118,11 @@ var hom = document.getElementById("home")
 var serv = document.getElementById("service")
 var quali = document.getElementById("quality")
 var galler = document.getElementById("gallery")
+
 var conta = document.getElementById("contact")
+
+
+
 function isin(){
     tab= [hom,serv,quali,galler,conta]
     tab2= [hom_but,serv_but,quali_but,gallery_but,contact_but]
@@ -131,12 +138,41 @@ function isin(){
         }
     })
     
-    // if(isInViewport(hom)){
-    //     hom_but.classList.add("is_active")
-    // }
-    
+    if(serv_but.classList.contains("is_active") && !serv.classList.contains("activated_offer")){
+        
+        console.log("working")
 
+
+        serv.classList.add("activated_offer")
+
+    }
+    var galler_imgs = document.getElementsByClassName("im")
+    
+    if(gallery_but.classList.contains("is_active")  && !galler.classList.contains("activated_gallery")){
+        
+        console.log("working")
+        galler.classList.add("activated_gallery")
+
+        async function main() {
+            for(let x =0;x < galler_imgs.length; x++ ){
+                galler_imgs[x].classList.add("activated_gallery")
+
+                await task();
+
+            }
+        }
+        main()
+    }
+        
+       
+
+    }
+const timer = ms => new Promise(res => setTimeout(res, ms))
+async function task() { 
+  await timer(200);
+  console.log(`Task done!`);
 }
+
 
 document.addEventListener("scroll",isin)
 
@@ -147,3 +183,4 @@ clickMenu.addEventListener("click", () => {
 	hamburger.classList.toggle("is_active");
 	sidebar.classList.toggle("is_active");
 });
+

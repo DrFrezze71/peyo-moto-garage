@@ -41,6 +41,11 @@ html{
 
 
 }
+.logo{
+    display: flex;
+    align-items: center;
+    padding-left: 1%;
+}
 .slogan h1{
     position: absolute;
     z-index: 1;
@@ -103,16 +108,24 @@ padding-right: 5%;
 .top_right:hover{
     cursor: pointer;
 }
+.im{
+    opacity: 0%;
+}
 
 .offer{
     position: relative;
     height: fit-content;
     width: 100%;
-
-
+    opacity: 0%;
+    transform: translate(-500px);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.activated_offer{
+    transition: all ease 1s 0s;
+    opacity: 100%;
+    transform: translate(0)
 }
 
 .offers{
@@ -234,7 +247,10 @@ padding-right: 5%;
     flex-direction: row;
     flex-wrap: wrap;
 }
-
+.activated_gallery{
+    transition: all 1s;
+    opacity:100%;
+}
 
 .contact{
     color: white;
@@ -290,7 +306,15 @@ padding-right: 5%;
 }
 
 
-
+footer{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    color: rgb(255, 199, 149);
+    background-color: rgb(19, 19, 19);
+    font-weight: 300;
+    padding-right: 10px;
+}
 
 
 
@@ -486,110 +510,8 @@ padding-right: 5%;
 .popup__arrow:active {
 	transform: translateX(-50%) translateY(-50%) scale(0.9);
 } /*# sourceMappingURL=s.css.map */
-
-
-@media all and (max-width: 620px) {
-    .top{
-        display:none;
-        
-    }
-    .main-img{
-        margin-top: 0px;
-        width: 200%;
-        margin-left: -100%;
-
-
-    }
-    
-    .offer-img{
-        width: 200%;
-        height: 200vh;
-        margin-left: -100%;
-
-    }   
-
-    .offer{
-        margin-top: -100vh;
-    }
-    .slogan h1{
-        font-size: 6.5vw;
-        top:50vw;
-    }
-    .slogan h2{
-        font-size: 3.5vw;
-        top: 58vw;
-        
-
-    }
-    .offer h1{
-        font-size: 8vw;
-    }
-    .under h3::after { 
-        height: 3px;
-    
-    }
-    .each{
-        font-size:3.5vw ;
-    }
-    .each img{
-        width: 10vw;
-    }
-    .under h3{
-        font-size: 3vw;
-    }
-    .quality img{
-        width: 170%;
-        margin-left: -70%;
-    }
-    .quality_tex h1{
-        font-size: 5vw;
-    }
-    .quality_tex h2{
-        font-size: 2.5vw;
-        width: 50%;
-    }
-    .gallery .thumbnail:nth-last-child(-n +3){
-        display: none;
-    }
-
-    .contact-left{
-       padding-bottom: 40px;
-       width: 100%;
-        
-    }
-    .contact-right{
-        width: 100%;
-        text-align: center;
-    }
-    .thumbnail{
-        margin:20px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .sidebar {
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
     z-index: 100000;
 	display: flex;
@@ -672,5 +594,133 @@ padding-right: 5%;
 	transform: rotate(-90deg);
 }
 nav{
-    
+    position: absolute;
+    top: 0;
+    z-index: 1000000;
+    display: none;
 }
+
+@media all and (max-width: 850px) {
+    .top{
+        display:none;
+        
+    }
+    .main-img{
+        margin-top: 0px;
+        width: 200%;
+        margin-left: -100%;
+
+
+    }
+    
+    .offer-img{
+        width: 200%;
+        height: 200vh;
+        margin-left: -100%;
+
+    }   
+
+    .offer{
+        margin-top: -100vh;
+    }
+    .slogan h1{
+        font-size: 6.5vw;
+        top:50vw;
+    }
+    .slogan h2{
+        font-size: 3.5vw;
+        top: 58vw;
+        
+
+    }
+    .offer h1{
+        font-size: 8vw;
+    }
+    .under h3::after { 
+        height: 3px;
+    
+    }
+    .each{
+        font-size:3.5vw ;
+    }
+    .each img{
+        width: 10vw;
+    }
+    .under h3{
+        font-size: 3vw;
+    }
+    .quality img{
+        width: 170%;
+        margin-left: -70%;
+    }
+    .quality_tex h1{
+        font-size: 5vw;
+    }
+    .quality_tex h2{
+        font-size: 2.5vw;
+        width: 50%;
+    }
+    .gallery .thumbnail:nth-last-child(-n +3){
+        display: none;
+    }
+
+    .contact-left{
+       padding-bottom: 40px;
+       width: 100%;
+       padding-left:3%;
+        
+    }
+    .contact-right{
+        width: 100%;
+        text-align: center;
+    }
+    .thumbnail{
+        margin:20px;
+    }
+    nav{
+        position: fixed;
+        display: unset;
+    }
+    footer{
+        justify-content: center;
+        padding-right: 0;
+        
+    }
+}
+@media all and (max-width: 430px) {
+
+    footer{
+        font-size: 4vw;
+    }
+    .contact-left,.contact-left a {
+
+        font-size: 4.8vw;
+
+         
+     }
+     #map{
+        height:60vw;
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
