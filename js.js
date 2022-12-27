@@ -114,6 +114,11 @@ var serv_but = document.getElementById("service_button")
 var quali_but = document.getElementById("quality_button")
 var gallery_but = document.getElementById("gallery_button")
 var contact_but = document.getElementById("contact_button")
+var hom_but_sidebar = document.getElementById("home_button_sidebar")
+var serv_but_sidebar = document.getElementById("service_button_sidebar")
+var quali_but_sidebar = document.getElementById("quality_button_sidebar")
+var gallery_but_sidebar = document.getElementById("gallery_button_sidebar")
+var contact_but_sidebar = document.getElementById("contact_button_sidebar")
 var hom = document.getElementById("home")
 var serv = document.getElementById("service")
 var quali = document.getElementById("quality")
@@ -125,6 +130,7 @@ var conta = document.getElementById("contact")
 
 function isin(){
     tab= [hom,serv,quali,galler,conta]
+    tab_sidebar = [hom_but_sidebar,serv_but_sidebar,quali_but_sidebar,gallery_but_sidebar,contact_but_sidebar]
     tab2= [hom_but,serv_but,quali_but,gallery_but,contact_but]
     
 
@@ -134,13 +140,14 @@ function isin(){
             allActive.forEach((item)=>{
                 item.classList.remove("is_active");})
             tab2[index].classList.add("is_active")
+            tab_sidebar[index].classList.add("is_active")
 
         }
     })
     
     if(serv_but.classList.contains("is_active") && !serv.classList.contains("activated_offer")){
         
-        console.log("working")
+       
 
 
         serv.classList.add("activated_offer")
@@ -150,7 +157,7 @@ function isin(){
     
     if(gallery_but.classList.contains("is_active")  && !galler.classList.contains("activated_gallery")){
         
-        console.log("working")
+    
         galler.classList.add("activated_gallery")
 
         async function main() {
@@ -170,10 +177,9 @@ function isin(){
 const timer = ms => new Promise(res => setTimeout(res, ms))
 async function task() { 
   await timer(200);
-  console.log(`Task done!`);
 }
 
-
+isin()
 document.addEventListener("scroll",isin)
 
 let clickMenu = document.querySelector("#clickMenu");

@@ -3,7 +3,41 @@
 }
 html{
     scroll-behavior: smooth;
+
+	overflow-y: overlay; 
 }
+
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(255, 199, 149);
+    border-radius:20px;
+    background-clip: content-box;
+    border:0.4rem solid transparent;
+    
+    
+    
+    }
+    
+    body::-webkit-scrollbar-track-piece
+    {
+        display:none;
+        
+    }
+    
+    body::-webkit-scrollbar {
+    width: 1.2rem;
+    background: transparent;
+    
+    }
+    
+    
+    
+    
+    
+
+
+
+
 .main-img{
     width: 100%;
     filter: brightness(80%);
@@ -41,11 +75,7 @@ html{
 
 
 }
-.logo{
-    display: flex;
-    align-items: center;
-    padding-left: 1%;
-}
+
 .slogan h1{
     position: absolute;
     z-index: 1;
@@ -77,15 +107,8 @@ a{
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
-.top .logo img{
-    height:65px;
-    
-}
-.logo{
-    width: 20%;
-    text-align: center;
 
-}
+
 .top_right{
 
 display: flex;
@@ -111,19 +134,37 @@ padding-right: 5%;
 .im{
     opacity: 0%;
 }
+.offer .all .under{
+    opacity: 0%;
+    transform: translate(-500px);
+}
 
 .offer{
     position: relative;
     height: fit-content;
     width: 100%;
-    opacity: 0%;
-    transform: translate(-500px);
+    
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.activated_offer{
+.activated_offer .all .under:nth-child(1){
     transition: all ease 1s 0s;
+    opacity: 100%;
+    transform: translate(0)
+}
+.activated_offer .all .under:nth-child(2){
+    transition: all ease 1s 0.4s;
+    opacity: 100%;
+    transform: translate(0)
+}
+.activated_offer .all .under:nth-child(3){
+    transition: all ease 1s 0.7s;
+    opacity: 100%;
+    transform: translate(0)
+}
+.activated_offer .all .under:nth-child(4){
+    transition: all ease 1s 1s;
     opacity: 100%;
     transform: translate(0)
 }
@@ -145,7 +186,7 @@ padding-right: 5%;
     margin-bottom: 20px;
 }
 .under h3{
-    color: white;
+    color: rgba(255, 255, 255, 0.832);
     font-size: 17px;
     font-weight: 500;
     
@@ -154,6 +195,9 @@ padding-right: 5%;
 }
 .under{
     margin-bottom: 50px;
+}
+.under h2{
+    font-weight: 500;
 }
 .each{
     display: flex;
@@ -171,8 +215,8 @@ padding-right: 5%;
     margin-top: 10px;
     
     background:white; 
-    width:70%; 
-    height:4px; 
+    width:100%; 
+    height:3px; 
     border-radius: 3px;
   }
 .each img{
@@ -214,7 +258,7 @@ padding-right: 5%;
     padding-right: 20px;
     width: 35%;
     font-weight: 300;
-    color: rgb(255, 199, 149);;
+    color: rgb(255, 199, 149);
 
 }
 .quality_tex h2{
@@ -291,6 +335,9 @@ padding-right: 5%;
     filter: invert(100%)
 
 }
+.contact-left h2{
+    font-size: 20px;
+}
 
 .contact-left div a {
     color: rgb(255, 199, 149);
@@ -299,6 +346,13 @@ padding-right: 5%;
 }
 .contact-left div i{
     padding-inline: 10px;padding-top: 6px; color:rgb(255, 199, 149); font-weight: 500;
+}
+.socials{
+    padding-top:20px ;
+    text-align: right;
+}
+.socials i{
+    font-size: 35px;
 }
 .contact-right{
     width:50%;
@@ -520,7 +574,8 @@ footer{
 	align-items: center;
 	align-content: center;
 	position: absolute;
-	background-color: aqua;
+	background-color: rgb(19, 19, 19);
+
 	top: -100vh;
 	transition: top 0.4s;
 }
@@ -582,16 +637,19 @@ footer{
 #menu.is_active {
 	transition-duration: 0.5s;
 	transform: rotate(45deg);
+    background-color: rgb(255, 199, 149);
 }
 #menu.is_active::before {
 	transition-duration: 0.5s;
 	transform: translate3d(-4px, -9px, 10px);
 	opacity: 0;
+
 }
 #menu.is_active::after {
 	transition-duration: 0.5s;
 	top: 0;
 	transform: rotate(-90deg);
+    background-color: rgb(255, 199, 149);
 }
 nav{
     position: absolute;
@@ -601,6 +659,29 @@ nav{
 }
 
 @media all and (max-width: 850px) {
+    body::-webkit-scrollbar-thumb {
+        display:none;
+    
+    
+    
+    }
+    
+    body::-webkit-scrollbar-track-piece
+    {
+        display:none;
+        
+    }
+    
+    body::-webkit-scrollbar {
+        display:none;
+    
+    }
+    
+    
+    
+    
+    
+    
     .top{
         display:none;
         
@@ -670,6 +751,9 @@ nav{
        padding-left:3%;
         
     }
+    .socials{
+        text-align: center;
+    }
     .contact-right{
         width: 100%;
         text-align: center;
@@ -692,7 +776,7 @@ nav{
     footer{
         font-size: 4vw;
     }
-    .contact-left,.contact-left a {
+    .contact-left h2,.contact-left a {
 
         font-size: 4.8vw;
 
