@@ -362,11 +362,15 @@ padding-right: 5%;
 
 footer{
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     width: 100%;
     color: rgb(255, 199, 149);
     background-color: rgb(19, 19, 19);
     font-weight: 300;
+    padding-right: 10px;
+}
+footer a{
+    color: rgb(255, 199, 149);
     padding-right: 10px;
 }
 
