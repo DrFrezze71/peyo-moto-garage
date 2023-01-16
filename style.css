@@ -63,10 +63,10 @@ body::-webkit-scrollbar-thumb {
     position: sticky;
     width: 100%;
     z-index: 100;
-    margin-top: 15px;
+
     top: 0px;
     height: 90px;
-    background-color: rgba(0, 0, 0, 0.579);
+    background-color: rgba(0, 0, 0, 0.704);
     color: white;
     
     justify-content: flex-end;
@@ -299,7 +299,7 @@ padding-right: 5%;
 .contact{
     color: white;
     width: 100%;
-    padding-block: 40px;
+    padding-block: 25px;
     background-color: rgb(19, 19, 19);
     
 }
@@ -770,7 +770,7 @@ nav{
         display: unset;
     }
     footer{
-        justify-content: center;
+   
         padding-right: 0;
         
     }
